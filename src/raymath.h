@@ -52,6 +52,10 @@
 #ifndef RAYMATH_H
 #define RAYMATH_H
 
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
 #if defined(RAYMATH_IMPLEMENTATION) && defined(RAYMATH_STATIC_INLINE)
     #error "Specifying both RAYMATH_IMPLEMENTATION and RAYMATH_STATIC_INLINE is contradictory"
 #endif
@@ -2186,5 +2190,9 @@ RMAPI int QuaternionEquals(Quaternion p, Quaternion q)
 
     return result;
 }
+
+#if defined(__cplusplus)
+}
+#endif
 
 #endif  // RAYMATH_H
